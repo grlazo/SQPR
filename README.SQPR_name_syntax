@@ -1,0 +1,59 @@
+Sample Name Syntax for Samples Run on the Applied Biosystems ABI Prism 3700 
+and the Beckman Coulter CEQ 2000 automated sequencers.
+-----------------------------------------------------------------------------
+
+Identifiers are separated by an underscore ("_") and the definitions are 
+described as below:
+
+plateID :       The plate name; it consists of any number of alphanumeric 
+                characters except "_" and special characters
+WELLposition:   The well location, which is a letter followed by 2 digits. 
+                This is usually the position specified by a 96-well formatted 
+                plate, or a 384-well formatted offset plate. Optionally, a 
+                384-well formatted plate location may also be  placed here.
+ALTposition:    Three characters are positioned here; the true plate location 
+                is noted if derived from a 384-well microtiter dish. If not 
+                used,  usually replaced by a three character "xxx" filler. 
+Z|Y:            "Z"  is used if the well contains a sample, "Y" is used if 
+                the well contains a control sample; the single letter should 
+                be placed immediately after the ALTposition designator.
+optional:       This region is optional and can contain optional notations 
+                of any type of characters or strings.
+capillary:      The ABI Prism 3700 automatically fills this with the capillary 
+                used for the sequencing run.
+
+-----------------------------------------------------------------------------
+
+Sequence name structure for sequences run on ABI Prism 3700.
+
+format: <plateID>_<WELLposition>_<ALTposition><Z|Y><optional>_<capillary>.ab1
+
+examples:
+
+test sample:            1215_A01_B01Z_0.5uL0321A6_002.ab1
+control sample:         1215_C05_E09Y_pGEM_USDA_034.ab1
+
+-----------------------------------------------------------------------------
+
+Sequence name structure for sequences run on Beckman Coulter CEQ 2000.
+
+format: <plateID>_<WELLposition>_<ALTposition><Z|Y><optional>.scf
+
+examples:
+
+test sample:            0410_A01_A01Zrev_00031319EJ.scf
+control sample:         0410_A02_xxxYrev_00031320EJ.scf
+
+-----------------------------------------------------------------------------
+  For more information see:
+  Lazo, G.R., Tong, J., Miller, R., Hsia, C., Rausch, C., Kang, Y., 
+  and Anderson, O.D. 2001. Software scripts for quality checking of 
+  high-throughput nucleic acid sequencers. BioTechniques Vol 30, No. 6.
+ 
+  This software is a "United States Government Work" under the terms 
+  of the United States Copyright Act. It was written as part of official 
+  duties performed by a United States Government employee(s) and thus 
+  cannot be copyrighted. This software is freely available to the public 
+  for use. The United States Department of Agriculture and the U.S. 
+  Government have not placed any restriction on its use or reproduction. 
+-----------------------------------------------------------------------------

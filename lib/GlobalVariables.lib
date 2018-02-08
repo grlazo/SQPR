@@ -1,0 +1,61 @@
+# -----------------------------------------------------------------------
+#  File Name: GlobalVariables.lib  v.8
+#  Description: This file defines locations for the: 
+#
+#  $TRACE_DIR              Trace File Data Directory (TFDD), 
+#  $FASTA_DIR              Phred Output Data Directory (PODD), 
+#  $CGI_BIN                CGI-BIN Directory, 
+#  $JAVA_APPLET_CLASS_URL  for Java Applet directory call, 
+#  $WEB_TRACE_DIR          Directory to temporary trace file data, 
+#  $WEB_TRACE_LINK_DIR     URL to temporary trace file data, 
+#  $TMP_DIR                location of temporary data storage, 
+#  $PHRED_PARAMETER_FILE   location of $PHRED_PARAMETER_FILE, 
+#  $PHRED                  location of phred 
+#
+#  Created: 05/17/2000
+#  Modified: 07/17/2000
+# -----------------------------------------------------------------------
+#
+#  These variables need to be defined for your particular 
+#  environment program to work on your system.
+
+#  Trace File Data Directory (TFDD) PATH
+   $TRACE_DIR = '/usr/local/data/TFDD';
+
+#  Phred Output Data Directory (PODD) PATH
+   $FASTA_DIR = '/usr/local/data/PODD';
+
+#  CGI-BIN sub-directory for SQPR scripts
+   $CGI_BIN = '/cgi-bin/SQPR';
+
+#  URL for the Java Applet Class (make note of URL paths used below)
+   $JAVA_APPLET_CLASS_URL = '/SQPR/java/lang';
+
+#  Directory for URL Access of called tracefile (temporary)
+   $WEB_TRACE_DIR = '/usr/local/htdocs/SQPR/trace';
+
+#  URL for above directory of called tracefile (temporary)
+   $WEB_TRACE_LINK_DIR = '/SQPR/trace';
+
+#  Directory for immediate phddisplay.cgi data (result1.txt, temporary)
+   $TMP_DIR = '/tmp';
+
+#  PATH of PHRED_PARAMETER_FILE (so phred recognizes chemistry settings)
+   $PHRED_PARAMETER_FILE = 'PHRED_PARAMETER_FILE=/usr/local/phred/PhredPar/phredpar.dat';
+
+#  PATH of phred executable
+   $PHRED = '/usr/local/bin/phred';
+
+# -----------------------------------------------------------------------
+# For more information see:
+# Lazo, G.R., Tong, J., Miller, R., Hsia, C., Rausch, C., Kang, Y., 
+# and Anderson, O.D. 2001. Software scripts for quality checking of 
+# high-throughput nucleic acid sequencers. BioTechniques Vol 30, No. 6.
+#
+# This software is a "United States Government Work" under the terms 
+# of the United States Copyright Act. It was written as part of official 
+# duties performed by a United States Government employee(s) and thus 
+# cannot be copyrighted. This software is freely available to the public 
+# for use. The United States Department of Agriculture and the U.S. 
+# Government have not placed any restriction on its use or reproduction. 
+# -----------------------------------------------------------------------

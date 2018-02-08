@@ -1,0 +1,69 @@
+Version: 8
+File Name: README.SQPR.v8
+--------------------------------------------------------------------------
+SQPR: Sequence Quality Plate Reader
+
+SOFTWARE SCRIPTS FOR QUALITY CHECKING OF HIGH-THROUGHPUT NUCLEIC 
+ACID SEQUENCERS. 2001. BioTechniques. Vol 30, No. 6.
+
+GR Lazo, J Tong, R Miller, C Hsia, C Rausch, Y Kang, and OD Anderson.
+USDA ARS Western Regional Research Center, 800 Buchanan Street, 
+Albany, CA 94710-1105.
+
+Address correspondence to: Gerard R. Lazo (lazo@pw.usda.gov).
+--------------------------------------------------------------------------
+Files Contained within directory: 
+
+	- dirdisplay.cgi
+	- runphred.cgi
+	- fastadisplay.cgi
+	- phddisplay.cgi
+	- redo.cgi
+	- trace.cgi
+	- trace1.cgi
+	- trace2.cgi
+
+	- GolbalVariables.lib
+        - subparseform.lib
+
+	- README.SQPR.v8
+	- README.SQPR_name_syntax
+
+Description of the Programs:
+
+This set of programs work under a cgi-bin directory of a web server
+and utilizes the phred program to read sequencing trace file data 
+from high-throughput automated sequencers and archives the data for 
+assessing the quality of sequencing runs.
+
+dirdisplay.cgi   : Displays a list of unprocessed datafolders.
+runphred.cgi     : Initiates phred analysis on the selected datafolder 
+                   displayed by dirdisplay.cgi.
+fastadisplay.cgi : Displays a list of all the phred-analyzed datafolders.
+phddisplay.cgi   : Displays a graphical representation of the analyzed 
+                   datafolder shown by fastadisplay.cgi. Displays are 
+                   of 96-samples at a time in standard 96-well format, 
+                   or 96 samples from a 384-well formatted plate which 
+                   is automatically detected.
+redo.cgi         : If empty cells appears, an option is presented to 
+                   erase data results so that they may be re-analyzed by 
+                   the runphred.cgi script.
+trace*.cgi       : These files are activated from the phddisplay.cgi 
+                   display to initiate a java applet to display 
+                   individual sequence traces.
+GolbalVariables.lib : File for configuring the program scripts to 
+                   read and write in data directories, and for locating 
+                   executable and configuration files.
+subparseform.lib : Used to create HTML pages
+README.SQPR.v8   : This file.
+README.SQPR_name_syntax : This file explains the default syntax for 
+                   for naming sequence files and directories.
+
+--------------------------------------------------------------------------
+ This software is a "United States Government Work" under the terms 
+ of the United States Copyright Act. It was written as part of official 
+ duties performed by a United States Government employee(s) and thus 
+ cannot be copyrighted. This software is freely available to the public 
+ for use. The United States Department of Agriculture and the U.S. 
+ Government have not placed any restriction on its use or reproduction. 
+--------------------------------------------------------------------------
